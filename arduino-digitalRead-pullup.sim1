@@ -1,0 +1,47 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Resistor" CircId="Resistor-3" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-464,-28" rotation="0" hflip="1" vflip="1" label="Resistor-3" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="330 Ω" />
+
+<item itemtype="Ground" CircId="Ground-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-516,40" rotation="0" hflip="1" vflip="1" label="Ground-4" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-15" mainComp="false" Show_id="true" Show_Val="false" Pos="-436,-172" rotation="0" hflip="1" vflip="1" label="Push" idLabPos="-5.78121,-27.1101" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-28" mainComp="false" ShowProp="Voltage" Show_id="true" Show_Val="true" Pos="-516,-172" rotation="0" hflip="1" vflip="1" label="VCC" idLabPos="-64,-24" labelrot="0" valLabPos="-7.1141,10.2215" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Led" CircId="Led-31" mainComp="false" Show_id="true" Show_Val="false" Pos="-404,-28" rotation="540" hflip="1" vflip="1" label="Led" idLabPos="9.76911,26.6496" labelrot="180" valLabPos="-16,20" valLabRot="0" Color="Red" Grounded="false" Threshold="1.8 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-360,-156" rotation="0" hflip="1" vflip="1" label="Arduino Uno" idLabPos="64.8671,-17.7785" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="C:/Users/bkhro/Documents/Arduino/Arduino-digitalRead/digital-Read-Arduino/build/arduino.avr.uno/digital-Read-Arduino.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Resistor" CircId="Resistor-24" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-464,-68" rotation="0" hflip="1" vflip="1" label="Resistor-24" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Node" CircId="Node-34" mainComp="false" Pos="-516,0" />
+
+<item itemtype="Node" CircId="Node-26" mainComp="false" Pos="-404,-68" />
+
+<item itemtype="Node" CircId="Node-25" mainComp="false" Pos="-516,-28" />
+
+<item itemtype="Connector" uid="Connector-54" startpinid="Fixed Voltage-28-outnod" endpinid="Push-15-pinP0" pointList="-500,-172,-452,-172" />
+
+<item itemtype="Connector" uid="Connector-65" startpinid="Resistor-3-rPin" endpinid="Led-31-rPin" pointList="-448,-28,-420,-28" />
+
+<item itemtype="Connector" uid="Connector-72" startpinid="Ground-4-Gnd" endpinid="Node-34-0" pointList="-516,24,-516,0" />
+
+<item itemtype="Connector" uid="Connector-71" startpinid="Node-34-1" endpinid="Uno-1-GND2" pointList="-516,0,-376,0,-376,-20,-352,-20" />
+
+<item itemtype="Connector" uid="Connector-64" startpinid="Led-31-lPin" endpinid="Uno-1-13" pointList="-388,-28,-352,-28" />
+
+<item itemtype="Connector" uid="Connector-51" startpinid="Resistor-24-rPin" endpinid="Node-26-1" pointList="-448,-68,-404,-68" />
+
+<item itemtype="Connector" uid="Connector-52" startpinid="Push-15-switch0pinN" endpinid="Node-26-0" pointList="-420,-172,-404,-172,-404,-68" />
+
+<item itemtype="Connector" uid="Connector-53" startpinid="Node-26-2" endpinid="Uno-1-8" pointList="-404,-68,-352,-68" />
+
+<item itemtype="Connector" uid="Connector-73" startpinid="Node-34-2" endpinid="Node-25-0" pointList="-516,0,-516,-28" />
+
+<item itemtype="Connector" uid="Connector-70" startpinid="Node-25-2" endpinid="Resistor-3-lPin" pointList="-516,-28,-480,-28" />
+
+<item itemtype="Connector" uid="Connector-48" startpinid="Resistor-24-lPin" endpinid="Node-25-1" pointList="-480,-68,-516,-68,-516,-28" />
+
+</circuit>
